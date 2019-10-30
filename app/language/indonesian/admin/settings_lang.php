@@ -25,7 +25,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
 $lang['site_name']                                                   = 'Nama Situs';
 $lang['dateformat']                                                  = 'Format Tanggal';
 $lang['timezone']                                                    = 'Zona waktu';
-$lang['maintenance_mode']                                            = 'Mode Perawatan';
+$lang['maintenance_mode']                                            = 'Mode Maintenance';
 $lang['image_width']                                                 = 'Lebar Gambar';
 $lang['image_height']                                                = 'Tinggi Gambar';
 $lang['thumbnail_width']                                             = 'Thumbnail Width';
@@ -360,7 +360,7 @@ $lang['edit_price_on_sale']                                          = 'Ubah Har
 $lang['login_logo']                                                  = 'Login Logo';
 $lang['unit_has_subunit']                                            = 'Unit tidak dapat dihapus karena memiliki sub-unit';
 $lang['brand_has_products']                                          = 'Merek tidak dapat dihapus karena memiliki lampiran produk, tetapkan produk ke merek lain kemudian coba lagi.';
-$lang['apis_feature']                                                = 'APIs Feature';
+$lang['apis_feature']                                                = 'Fitur APIs';
 $lang['pdf_lib']                                                     = 'PDF Library';
 $lang['indian_gst']                                                  = 'Indian GST';
 $lang['biz_state']                                                   = 'Status Bisnis';

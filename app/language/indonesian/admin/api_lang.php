@@ -18,8 +18,8 @@ defined('BASEPATH') or exit('No direct script access allowed');
  * Thank you
  */
 
-$lang['api_key']            = 'API Kunci';
-$lang['api_keys']           = 'API Kunci-kunci';
+$lang['api_key']            = 'API key';
+$lang['api_keys']           = 'API keys';
 $lang['create_api_key']     = 'Membuat Kunci API';
 $lang['delete_api_keys']    = 'Hapus Kunci API';
 $lang['key']                = 'Kunci';
