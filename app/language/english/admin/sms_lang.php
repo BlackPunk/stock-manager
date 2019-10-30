@@ -4,7 +4,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
 
 /*
  * Language: English - Module: SMS
- * Translated & willing to share? please email to support@tecdiary.com
+ * Translated & willing to share? please email to support@blackpunk.id
  */
 
 /* ****************************************************************************

@@ -2,20 +2,12 @@
 
 defined('BASEPATH') or exit('No direct script access allowed');
 
-/*
- *  ==============================================================================
- *  Author    : Mian Saleem
- *  Email     : saleem@tecdiary.com
- *  For       : Stock Manager Advance
- *  Web       : http://tecdiary.com
- *  ==============================================================================
- */
+
 
 class Sma
 {
     public function __construct()
-    {
-    }
+    { }
 
     public function actionPermissions($action = null, $module = null)
     {
@@ -154,15 +146,13 @@ class Sma
         }
         if ($this->Settings->sac) {
             return ((($this->Settings->display_symbol == 1 || $symbol) && $this->Settings->display_symbol != 2) ? $symbol : '') .
-            $this->formatSAC($this->formatDecimal($number)) .
-            ($this->Settings->display_symbol == 2 ? $symbol : '');
+                $this->formatSAC($this->formatDecimal($number)) . ($this->Settings->display_symbol == 2 ? $symbol : '');
         }
         $decimals = $this->Settings->decimals;
         $ts       = $this->Settings->thousands_sep == '0' ? ' ' : $this->Settings->thousands_sep;
         $ds       = $this->Settings->decimals_sep;
         return ((($this->Settings->display_symbol == 1 || $symbol && $number != 0) && $this->Settings->display_symbol != 2) ? $symbol : '') .
-        number_format($number, $decimals, $ds, $ts) .
-        ($this->Settings->display_symbol == 2 && $number != 0 ? $symbol : '');
+            number_format($number, $decimals, $ds, $ts) . ($this->Settings->display_symbol == 2 && $number != 0 ? $symbol : '');
     }
 
     public function formatNumber($number, $decimals = null)
@@ -358,7 +348,7 @@ class Sma
         die();
     }
 
-    public function qrcode($type = 'text', $text = 'http://tecdiary.com', $size = 2, $level = 'H', $sq = null)
+    public function qrcode($type = 'text', $text = 'http://blackpunk.id', $size = 2, $level = 'H', $sq = null)
     {
         $file_name = 'assets/uploads/qrcode' . $this->session->userdata('user_id') . ($sq ? $sq : '') . ($this->Settings->barcode_img ? '.png' : '.svg');
         if ($type == 'link') {
@@ -400,7 +390,7 @@ class Sma
     public function send_email($to, $subject, $message, $from = null, $from_name = null, $attachment = null, $cc = null, $bcc = null)
     {
         list($user, $domain) = explode('@', $to);
-        if ($domain != 'tecdiary.com' || DEMO) {
+        if ($domain != 'blackpunk.id' || DEMO) {
             $result = false;
             $this->load->library('tec_mail');
             try {

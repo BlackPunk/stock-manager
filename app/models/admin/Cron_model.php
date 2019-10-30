@@ -118,7 +118,7 @@ class Cron_model extends CI_Model
 
             foreach ($owners as $owner) {
                 list($user, $domain) = explode('@', $owner->email);
-                if ($domain != 'tecdiary.com') {
+                if ($domain != 'abc.com') {
                     $this->load->library('parser');
                     $parse_data = [
                         'name'      => $owner->first_name . ' ' . $owner->last_name,
@@ -147,7 +147,7 @@ class Cron_model extends CI_Model
         $fields = ['version' => $this->Settings->version, 'code' => $this->Settings->purchase_code, 'username' => $this->Settings->envato_username, 'site' => base_url()];
         $this->load->helper('update');
         $protocol = is_https() ? 'https://' : 'http://';
-        $updates  = get_remote_contents($protocol . 'tecdiary.com/api/v1/update/', $fields);
+        $updates  = get_remote_contents($protocol . 'blackpunk.id/api/v1/update/', $fields);
         $response = json_decode($updates);
         if (!empty($response->data->updates)) {
             $this->db->update('settings', ['update' => 1], ['setting_id' => 1]);
@@ -307,7 +307,7 @@ class Cron_model extends CI_Model
         $this->db->where('costing.date', $date);
         if ($warehouse_id) {
             $this->db->join('sales', 'sales.id=costing.sale_id')
-            ->where('sales.warehouse_id', $warehouse_id);
+                ->where('sales.warehouse_id', $warehouse_id);
         }
 
         $q = $this->db->get('costing');
@@ -372,7 +372,7 @@ class Cron_model extends CI_Model
     private function getReturns($sdate, $edate, $warehouse_id = null)
     {
         $this->db->select('SUM( COALESCE( grand_total, 0 ) ) AS total', false)
-        ->where('sale_status', 'returned');
+            ->where('sale_status', 'returned');
         $this->db->where('date >=', $sdate)->where('date <=', $edate);
         if ($warehouse_id) {
             $this->db->where('warehouse_id', $warehouse_id);

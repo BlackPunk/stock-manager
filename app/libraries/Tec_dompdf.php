@@ -4,7 +4,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
 /*
  *  ==============================================================================
  *  Author  : Mian Saleem
- *  Email   : saleem@tecdiary.com
+ *  Email   : support@blackpunk.id
  *  For     : DOMPDF
  *  Web     : https://github.com/dompdf/dompdf
  *  License : LGPL-2.1

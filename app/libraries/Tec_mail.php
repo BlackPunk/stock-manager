@@ -1,13 +1,7 @@
 <?php
 
 defined('BASEPATH') or exit('No direct script access allowed');
-/*
-*  ==============================================================================
-*  Author   : Mian Saleem
-*  Email    : saleem@tecdiary.com
-*  Web      : http://tecdiary.com
-*  ==============================================================================
-*/
+
 
 use PHPMailer\PHPMailer\Exception;
 use PHPMailer\PHPMailer\PHPMailer;
@@ -15,8 +9,7 @@ use PHPMailer\PHPMailer\PHPMailer;
 class Tec_mail
 {
     public function __construct()
-    {
-    }
+    { }
 
     public function send_mail($to, $subject, $body, $from = null, $from_name = null, $attachment = null, $cc = null, $bcc = null)
     {
@@ -36,7 +29,7 @@ class Tec_mail
                 $mail->Password   = $this->Settings->smtp_pass;
                 $mail->SMTPSecure = !empty($this->Settings->smtp_crypto) ? $this->Settings->smtp_crypto : false;
                 $mail->Port       = $this->Settings->smtp_port;
-            // $mail->SMTPDebug = 2;
+                // $mail->SMTPDebug = 2;
             } else {
                 $mail->isMail();
             }

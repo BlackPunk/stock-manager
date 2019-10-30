@@ -209,7 +209,7 @@ CREATE TABLE `sma_companies` (
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 INSERT INTO `sma_companies` (`id`, `group_id`, `group_name`, `customer_group_id`, `customer_group_name`, `name`, `company`, `vat_no`, `address`, `city`, `state`, `postal_code`, `country`, `phone`, `email`, `cf1`, `cf2`, `cf3`, `cf4`, `cf5`, `cf6`, `invoice_footer`, `payment_term`, `logo`, `award_points`, `deposit_amount`, `price_group_id`, `price_group_name`, `gst_no`) VALUES
-(6,	NULL,	'biller',	NULL,	NULL,	'Mian Saleem',	'Test Biller',	'5555',	'Biller adddress',	'City',	'',	'',	'Country',	'012345678',	'saleem@tecdiary.com',	'',	'',	'',	'',	'',	'',	'Thank you for shopping with us. Please come again',	0,	'logo1.png',	0,	NULL,	NULL,	NULL,	''),
+(6,	NULL,	'biller',	NULL,	NULL,	'Mian Saleem',	'Test Biller',	'5555',	'Biller adddress',	'City',	'',	'',	'Country',	'012345678',	'support@blackpunk.id',	'',	'',	'',	'',	'',	'',	'Thank you for shopping with us. Please come again',	0,	'logo1.png',	0,	NULL,	NULL,	NULL,	''),
 (7,	3,	'customer',	1,	'General',	'Walk-in Customer',	'Walk-in Customer',	'',	'Customer Address',	'Petaling Jaya',	'Selangor',	'46000',	'Malaysia',	'0123456789',	'customer@tecdiary.com',	'',	'',	'',	'',	'',	'',	NULL,	0,	'logo.png',	0,	NULL,	NULL,	NULL,	'');
 
 DROP TABLE IF EXISTS `sma_costing`;
@@ -415,7 +415,7 @@ CREATE TABLE `sma_notifications` (
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 INSERT INTO `sma_notifications` (`id`, `comment`, `date`, `from_date`, `till_date`, `scope`) VALUES
-(1,	'<p>Thank you for purchasing Stock Manager Advance. Please do not forget to check the documentation in help folder. If you find any error/bug, please email to support@tecdiary.com with details. You can send us your valued suggestions/feedback too.</p><p>Please rate Stock Manager Advance on your download page of codecanyon.net</p>',	'2014-08-15 06:00:57',	'2015-01-01 00:00:00',	'2017-01-01 00:00:00',	3);
+(1,	'<p>Thank you for purchasing Stock Manager Advance. Please do not forget to check the documentation in help folder. If you find any error/bug, please email to support@blackpunk.id with details. You can send us your valued suggestions/feedback too.</p><p>Please rate Stock Manager Advance on your download page of codecanyon.net</p>',	'2014-08-15 06:00:57',	'2015-01-01 00:00:00',	'2017-01-01 00:00:00',	3);
 
 DROP TABLE IF EXISTS `sma_order_ref`;
 CREATE TABLE `sma_order_ref` (

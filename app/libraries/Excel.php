@@ -4,7 +4,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
 /*
  *  ==============================================================================
  *  Author  : Mian Saleem
- *  Email   : saleem@tecdiary.com
+ *  Email   : support@blackpunk.id
  *  For     : PHPExcel
  *  Web     : https://github.com/PHPOffice/PHPExcels
  *  License : LGPL (GNU LESSER GENERAL PUBLIC LICENSE)

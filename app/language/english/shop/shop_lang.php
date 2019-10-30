@@ -14,7 +14,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
  *
  * You can translate this file to your language.
  * For instruction on new language setup, please visit the documentations.
- * You also can share your language files by emailing to saleem@tecdiary.com
+ * You also can share your language files by emailing to support@blackpunk.id
  * Thank you
  */
 
@@ -23,7 +23,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
 * Please only change the part after = and make sure you change the the words in between "";
 * $lang['home']                         = "Home";
 * Don't change this                     = "You can change this part";
-* For support email support@tecdiary.com Thank you!
+* For support email support@blackpunk.id Thank you!
 */
 
 $lang['home']                              = 'Home';

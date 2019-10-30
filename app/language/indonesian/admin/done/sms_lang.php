@@ -17,7 +17,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
  * Translated by:
  * Bram Andrian (barulaku) bram.andrian@gmail.com
  *
- * Translated & willing to share? please email to support@tecdiary.com
+ * Translated & willing to share? please email to support@blackpunk.id
  */
 
 /* ****************************************************************************

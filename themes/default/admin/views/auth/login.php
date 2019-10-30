@@ -1,14 +1,20 @@
-<?php defined('BASEPATH') or exit('No direct script access allowed'); ?><!DOCTYPE html>
+<?php defined('BASEPATH') or exit('No direct script access allowed'); ?>
+<!DOCTYPE html>
 <html>
+
 <head>
     <meta charset="utf-8">
     <title><?= $title ?></title>
-    <script type="text/javascript">if (parent.frames.length !== 0) { top.location = '<?=admin_url()?>'; }</script>
+    <script type="text/javascript">
+        if (parent.frames.length !== 0) {
+            top.location = '<?= admin_url() ?>';
+        }
+    </script>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="shortcut icon" href="<?= $assets ?>images/icon.png"/>
-    <link href="<?= $assets ?>styles/theme.css" rel="stylesheet"/>
-    <link href="<?= $assets ?>styles/style.css" rel="stylesheet"/>
-    <link href="<?= $assets ?>styles/helpers/login.css" rel="stylesheet"/>
+    <link rel="shortcut icon" href="<?= $assets ?>images/icon.png" />
+    <link href="<?= $assets ?>styles/theme.css" rel="stylesheet" />
+    <link href="<?= $assets ?>styles/style.css" rel="stylesheet" />
+    <link href="<?= $assets ?>styles/helpers/login.css" rel="stylesheet" />
     <script type="text/javascript" src="<?= $assets ?>js/jquery-2.0.3.min.js"></script>
     <!--[if lt IE 9]>
     <script src="<?= $assets ?>js/respond.min.js"></script>
@@ -30,8 +36,8 @@
     <div class="page-back">
         <div class="text-center">
             <?php if ($Settings->logo2) {
-    echo '<img src="' . base_url('assets/uploads/logos/' . $Settings->logo2) . '" alt="' . $Settings->site_name . '" style="margin-bottom:10px;" />';
-} ?>
+                echo '<img src="' . base_url('assets/uploads/logos/' . $Settings->logo2) . '" alt="' . $Settings->site_name . '" style="margin-bottom:10px;" />';
+            } ?>
         </div>
 
         <div id="login">
@@ -40,20 +46,20 @@
                 <div class="login-form-div">
                     <div class="login-content">
                         <?php if ($Settings->mmode) {
-    ?>
+                            ?>
                             <div class="alert alert-warning">
                                 <button data-dismiss="alert" class="close" type="button">×</button>
                                 <?= lang('site_offline') ?>
                             </div>
-                            <?php
-}
+                        <?php
+                        }
                         if ($error) {
                             ?>
                             <div class="alert alert-danger">
                                 <button data-dismiss="alert" class="close" type="button">×</button>
                                 <ul class="list-group"><?= $error; ?></ul>
                             </div>
-                            <?php
+                        <?php
                         }
                         if ($message) {
                             ?>
@@ -61,7 +67,7 @@
                                 <button data-dismiss="alert" class="close" type="button">×</button>
                                 <ul class="list-group"><?= $message; ?></ul>
                             </div>
-                            <?php
+                        <?php
                         }
                         ?>
                         <?php echo admin_form_open('auth/login', 'class="login" data-toggle="validator"'); ?>
@@ -72,15 +78,13 @@
                             <div class="textbox-wrap form-group">
                                 <div class="input-group">
                                     <span class="input-group-addon"><i class="fa fa-user"></i></span>
-                                    <input type="text" value="<?= DEMO ? 'owner@tecdiary.com' : ''; ?>" required="required" class="form-control" name="identity"
-                                    placeholder="<?= lang('username') ?>"/>
+                                    <input type="text" value="<?= DEMO ? 'owner@tecdiary.com' : ''; ?>" required="required" class="form-control" name="identity" placeholder="<?= lang('username') ?>" />
                                 </div>
                             </div>
                             <div class="textbox-wrap form-group">
                                 <div class="input-group">
                                     <span class="input-group-addon"><i class="fa fa-key"></i></span>
-                                    <input type="password" value="<?= DEMO ? '12345678' : ''; ?>" required="required" class="form-control " name="password"
-                                    placeholder="<?= lang('pw') ?>"/>
+                                    <input type="password" value="<?= DEMO ? '12345678' : ''; ?>" required="required" class="form-control " name="password" placeholder="<?= lang('pw') ?>" />
                                 </div>
                             </div>
                         </div>
@@ -106,7 +110,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <?php
+                        <?php
                         } /* echo $recaptcha_html; */
                         ?>
 
@@ -137,7 +141,7 @@
                             <a href="#register" class="text-info register_link"><?= lang('click_here') ?></a>
                             <span><?= lang('to_register') ?></span>
                         </div>
-                        <?php
+                    <?php
                     }
                     ?>
                 </div>
@@ -155,7 +159,7 @@
                                 <button data-dismiss="alert" class="close" type="button">×</button>
                                 <ul class="list-group"><?= $error; ?></ul>
                             </div>
-                            <?php
+                        <?php
                         }
                         if ($message) {
                             ?>
@@ -163,7 +167,7 @@
                                 <button data-dismiss="alert" class="close" type="button">×</button>
                                 <ul class="list-group"><?= $message; ?></ul>
                             </div>
-                            <?php
+                        <?php
                         }
                         ?>
                         <div class="div-title col-sm-12">
@@ -177,8 +181,7 @@
                             <div class="textbox-wrap form-group">
                                 <div class="input-group">
                                     <span class="input-group-addon "><i class="fa fa-envelope"></i></span>
-                                    <input type="email" name="forgot_email" class="form-control "
-                                    placeholder="<?= lang('email_address') ?>" required="required"/>
+                                    <input type="email" name="forgot_email" class="form-control " placeholder="<?= lang('email_address') ?>" required="required" />
                                 </div>
                             </div>
                             <div class="form-action">
@@ -211,7 +214,7 @@
                                 <?= lang('first_name', 'first_name'); ?>
                                 <div class="input-group">
                                     <span class="input-group-addon "><i class="fa fa-user"></i></span>
-                                    <input type="text" name="first_name" class="form-control " placeholder="<?= lang('first_name') ?>" required="required"/>
+                                    <input type="text" name="first_name" class="form-control " placeholder="<?= lang('first_name') ?>" required="required" />
                                 </div>
                             </div>
                         </div>
@@ -220,7 +223,7 @@
                                 <?= lang('last_name', 'last_name'); ?>
                                 <div class="input-group">
                                     <span class="input-group-addon "><i class="fa fa-user"></i></span>
-                                    <input type="text" name="last_name" class="form-control " placeholder="<?= lang('last_name') ?>" required="required"/>
+                                    <input type="text" name="last_name" class="form-control " placeholder="<?= lang('last_name') ?>" required="required" />
                                 </div>
                             </div>
                         </div>
@@ -229,7 +232,7 @@
                                 <?= lang('company', 'company'); ?>
                                 <div class="input-group">
                                     <span class="input-group-addon "><i class="fa fa-building"></i></span>
-                                    <input type="text" name="company" class="form-control " placeholder="<?= lang('company') ?>"/>
+                                    <input type="text" name="company" class="form-control " placeholder="<?= lang('company') ?>" />
                                 </div>
                             </div>
                         </div>
@@ -238,7 +241,7 @@
                                 <?= lang('phone', 'phone'); ?>
                                 <div class="input-group">
                                     <span class="input-group-addon "><i class="fa fa-phone-square"></i></span>
-                                    <input type="text" name="phone" class="form-control " placeholder="<?= lang('phone') ?>" required="required"/>
+                                    <input type="text" name="phone" class="form-control " placeholder="<?= lang('phone') ?>" required="required" />
                                 </div>
                             </div>
                         </div>
@@ -247,7 +250,7 @@
                                 <?= lang('username', 'username'); ?>
                                 <div class="input-group">
                                     <span class="input-group-addon "><i class="fa fa-user"></i></span>
-                                    <input type="text" name="username" class="form-control " placeholder="<?= lang('username') ?>" required="required"/>
+                                    <input type="text" name="username" class="form-control " placeholder="<?= lang('username') ?>" required="required" />
                                 </div>
                             </div>
                         </div>
@@ -256,7 +259,7 @@
                                 <?= lang('email', 'email'); ?>
                                 <div class="input-group">
                                     <span class="input-group-addon "><i class="fa fa-envelope"></i></span>
-                                    <input type="email" name="email" class="form-control " placeholder="<?= lang('email_address') ?>" required="required"/>
+                                    <input type="email" name="email" class="form-control " placeholder="<?= lang('email_address') ?>" required="required" />
                                 </div>
                             </div>
                         </div>
@@ -300,10 +303,6 @@
 
         <?php if (DEMO) {
             ?>
-            <div style="color:#fff;padding-top:30px;text-align:center;">
-              <h4 style="color:#f4f5f6;font-size:18px;line-height:24px;">Check out our latest item<br>Simple Business Manager &nbsp; [ <a href="https://tecdiary.com/products/simple-business-manager" target="_top" style="color:#fff;">Details</a> ] &nbsp; [ <a href="https://sbm.tecdiary.com/" target="_top" style="color:#fff;">Demo</a> ]</h3>
-                <a href="https://sbm.tecdiary.com/" target="_top"><img src="https://tecdiary.net/images/hotlink-ok/sbm.png" alt="Simple Business Manager" style="border-radius:10px !important;max-width:100%;"></a>
-            </div>
         <?php
         } ?>
 
@@ -313,7 +312,7 @@
     <script src="<?= $assets ?>js/jquery.cookie.js"></script>
     <script src="<?= $assets ?>js/login.js"></script>
     <script type="text/javascript">
-        $(document).ready(function () {
+        $(document).ready(function() {
             localStorage.clear();
             var hash = window.location.hash;
             if (hash && hash != '') {
@@ -323,4 +322,5 @@
         });
     </script>
 </body>
+
 </html>

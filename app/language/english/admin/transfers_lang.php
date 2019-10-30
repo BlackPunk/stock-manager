@@ -14,7 +14,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
  *
  * You can translate this file to your language.
  * For instruction on new language setup, please visit the documentations.
- * You alseo can share your language files by emailing to saleem@tecdiary.com
+ * You alseo can share your language files by emailing to support@blackpunk.id
  * Thank you
  */
 
