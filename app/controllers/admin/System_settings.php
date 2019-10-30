@@ -178,7 +178,8 @@ class system_settings extends MY_Controller
         $this->form_validation->set_rules('rate', lang('exchange_rate'), 'required|numeric');
 
         if ($this->form_validation->run() == true) {
-            $data = ['code'   => $this->input->post('code'),
+            $data = [
+                'code'   => $this->input->post('code'),
                 'name'        => $this->input->post('name'),
                 'rate'        => $this->input->post('rate'),
                 'symbol'      => $this->input->post('symbol'),
@@ -206,7 +207,8 @@ class system_settings extends MY_Controller
         $this->form_validation->set_rules('percent', lang('group_percentage'), 'required|numeric');
 
         if ($this->form_validation->run() == true) {
-            $data = ['name' => $this->input->post('name'),
+            $data = [
+                'name' => $this->input->post('name'),
                 'percent'   => $this->input->post('percent'),
             ];
         } elseif ($this->input->post('add_customer_group')) {
@@ -279,7 +281,8 @@ class system_settings extends MY_Controller
         $this->form_validation->set_rules('rate', lang('tax_rate'), 'required|numeric');
 
         if ($this->form_validation->run() == true) {
-            $data = ['name' => $this->input->post('name'),
+            $data = [
+                'name' => $this->input->post('name'),
                 'code'      => $this->input->post('code'),
                 'type'      => $this->input->post('type'),
                 'rate'      => $this->input->post('rate'),
@@ -402,7 +405,8 @@ class system_settings extends MY_Controller
             } else {
                 $map = null;
             }
-            $data = ['code'      => $this->input->post('code'),
+            $data = [
+                'code'      => $this->input->post('code'),
                 'name'           => $this->input->post('name'),
                 'phone'          => $this->input->post('phone'),
                 'email'          => $this->input->post('email'),
@@ -1166,7 +1170,8 @@ class system_settings extends MY_Controller
         $this->form_validation->set_rules('rate', lang('exchange_rate'), 'required|numeric');
 
         if ($this->form_validation->run() == true) {
-            $data = ['code'   => $this->input->post('code'),
+            $data = [
+                'code'   => $this->input->post('code'),
                 'name'        => $this->input->post('name'),
                 'rate'        => $this->input->post('rate'),
                 'symbol'      => $this->input->post('symbol'),
@@ -1199,7 +1204,8 @@ class system_settings extends MY_Controller
         $this->form_validation->set_rules('percent', lang('group_percentage'), 'required|numeric');
 
         if ($this->form_validation->run() == true) {
-            $data = ['name' => $this->input->post('name'),
+            $data = [
+                'name' => $this->input->post('name'),
                 'percent'   => $this->input->post('percent'),
             ];
         } elseif ($this->input->post('edit_customer_group')) {
@@ -1334,7 +1340,8 @@ class system_settings extends MY_Controller
         $this->form_validation->set_rules('rate', lang('tax_rate'), 'required|numeric');
 
         if ($this->form_validation->run() == true) {
-            $data = ['name' => $this->input->post('name'),
+            $data = [
+                'name' => $this->input->post('name'),
                 'code'      => $this->input->post('code'),
                 'type'      => $this->input->post('type'),
                 'rate'      => $this->input->post('rate'),
@@ -1434,7 +1441,8 @@ class system_settings extends MY_Controller
         $this->form_validation->set_rules('map', lang('map_image'), 'xss_clean');
 
         if ($this->form_validation->run() == true) {
-            $data = ['code'      => $this->input->post('code'),
+            $data = [
+                'code'      => $this->input->post('code'),
                 'name'           => $this->input->post('name'),
                 'phone'          => $this->input->post('phone'),
                 'email'          => $this->input->post('email'),
@@ -1793,7 +1801,8 @@ class system_settings extends MY_Controller
             admin_redirect('system_settings/brands');
         } else {
             $this->data['error']    = (validation_errors() ? validation_errors() : $this->session->flashdata('error'));
-            $this->data['userfile'] = ['name' => 'userfile',
+            $this->data['userfile'] = [
+                'name' => 'userfile',
                 'id'                          => 'userfile',
                 'type'                        => 'text',
                 'value'                       => $this->form_validation->set_value('userfile'),
@@ -1880,7 +1889,8 @@ class system_settings extends MY_Controller
             }
 
             $this->data['error']    = (validation_errors() ? validation_errors() : $this->session->flashdata('error'));
-            $this->data['userfile'] = ['name' => 'userfile',
+            $this->data['userfile'] = [
+                'name' => 'userfile',
                 'id'                          => 'userfile',
                 'type'                        => 'text',
                 'value'                       => $this->form_validation->set_value('userfile'),
@@ -1945,7 +1955,8 @@ class system_settings extends MY_Controller
             admin_redirect('system_settings/expense_categories');
         } else {
             $this->data['error']    = (validation_errors() ? validation_errors() : $this->session->flashdata('error'));
-            $this->data['userfile'] = ['name' => 'userfile',
+            $this->data['userfile'] = [
+                'name' => 'userfile',
                 'id'                          => 'userfile',
                 'type'                        => 'text',
                 'value'                       => $this->form_validation->set_value('userfile'),
@@ -2019,7 +2030,8 @@ class system_settings extends MY_Controller
             admin_redirect('system_settings/categories');
         } else {
             $this->data['error']    = (validation_errors() ? validation_errors() : $this->session->flashdata('error'));
-            $this->data['userfile'] = ['name' => 'userfile',
+            $this->data['userfile'] = [
+                'name' => 'userfile',
                 'id'                          => 'userfile',
                 'type'                        => 'text',
                 'value'                       => $this->form_validation->set_value('userfile'),
@@ -2096,7 +2108,8 @@ class system_settings extends MY_Controller
             $tax1 = ($this->input->post('tax_rate') != 0) ? 1 : 0;
             $tax2 = ($this->input->post('tax_rate2') != 0) ? 1 : 0;
 
-            $data = ['site_name' => DEMO ? 'Stock Manager Advance' : $this->input->post('site_name'),
+            $data = [
+                'site_name' => DEMO ? 'Stock Manager Advance' : $this->input->post('site_name'),
                 'rows_per_page'  => $this->input->post('rows_per_page'),
                 'dateformat'     => $this->input->post('dateformat'),
                 'timezone'       => DEMO ? 'Asia/Kuala_Lumpur' : $this->input->post('timezone'),
@@ -2110,7 +2123,7 @@ class system_settings extends MY_Controller
                 // 'allow_reg' => $this->input->post('allow_reg'),
                 // 'reg_notification' => $this->input->post('reg_notification'),
                 'accounting_method'    => $this->input->post('accounting_method'),
-                'default_email'        => DEMO ? 'noreply@tecdiary.com' : $this->input->post('email'),
+                'default_email'        => DEMO ? 'admin@blackpunk.id' : $this->input->post('email'),
                 'language'             => $lang,
                 'default_warehouse'    => $this->input->post('warehouse'),
                 'default_tax_rate'     => $this->input->post('tax_rate'),
@@ -2244,7 +2257,8 @@ class system_settings extends MY_Controller
         $this->form_validation->set_rules('extra_charges_other', $this->lang->line('extra_charges_others'), 'trim');
 
         if ($this->form_validation->run() == true) {
-            $data = ['active'         => $this->input->post('active'),
+            $data = [
+                'active'         => $this->input->post('active'),
                 'account_email'       => $this->input->post('account_email'),
                 'fixed_charges'       => $this->input->post('fixed_charges'),
                 'extra_charges_my'    => $this->input->post('extra_charges_my'),
@@ -2491,7 +2505,8 @@ class system_settings extends MY_Controller
         $this->form_validation->set_rules('extra_charges_other', $this->lang->line('extra_charges_others'), 'trim');
 
         if ($this->form_validation->run() == true) {
-            $data = ['active'         => $this->input->post('active'),
+            $data = [
+                'active'         => $this->input->post('active'),
                 'account_email'       => $this->input->post('account_email'),
                 'fixed_charges'       => $this->input->post('fixed_charges'),
                 'extra_charges_my'    => $this->input->post('extra_charges_my'),
@@ -2703,7 +2718,8 @@ class system_settings extends MY_Controller
             $this->session->set_flashdata('message', lang('price_updated'));
             admin_redirect('system_settings/group_product_prices/' . $group_id);
         } else {
-            $this->data['userfile'] = ['name' => 'userfile',
+            $this->data['userfile'] = [
+                'name' => 'userfile',
                 'id'                          => 'userfile',
                 'type'                        => 'text',
                 'value'                       => $this->form_validation->set_value('userfile'),
@@ -2750,7 +2766,7 @@ class system_settings extends MY_Controller
             $fields = ['version' => $this->Settings->version, 'code' => $this->Settings->purchase_code, 'username' => $this->Settings->envato_username, 'site' => base_url()];
             $this->load->helper('update');
             $protocol              = is_https() ? 'https://' : 'http://';
-            $updates               = get_remote_contents($protocol . 'api.tecdiary.com/v1/update/', $fields);
+            $updates               = get_remote_contents($protocol . 'api.blackpunk.id/v1/update/', $fields);
             $this->data['updates'] = json_decode($updates);
             $bc                    = [['link' => base_url(), 'page' => lang('home')], ['link' => '#', 'page' => lang('updates')]];
             $meta                  = ['page_title' => lang('updates'), 'bc' => $bc];

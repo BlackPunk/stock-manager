@@ -122,7 +122,8 @@ class Shop_settings extends MY_Controller
         $this->form_validation->set_rules('products_description', lang('products_description'), 'trim|required');
 
         if ($this->form_validation->run() == true) {
-            $data = ['shop_name'       => DEMO ? 'SMA Shop' : $this->input->post('shop_name'),
+            $data = [
+                'shop_name'       => DEMO ? 'SMA Shop' : $this->input->post('shop_name'),
                 'description'          => DEMO ? 'Stock Manager Advance - SMA Shop - Demo Ecommerce Shop that would help you to sell your products from your site. Locked on demo.' : $this->input->post('description'),
                 'products_description' => DEMO ? 'This is products page description and is locked on demo.' : $this->input->post('products_description'),
                 'warehouse'            => $this->input->post('warehouse'),
@@ -632,7 +633,7 @@ class Shop_settings extends MY_Controller
             $fields        = ['version' => $shop_settings->version, 'code' => $shop_settings->purchase_code, 'username' => $shop_settings->envato_username, 'site' => base_url()];
             $this->load->helper('update');
             $protocol                    = is_https() ? 'https://' : 'http://';
-            $updates                     = get_remote_contents($protocol . 'api.tecdiary.com/v1/update/', $fields);
+            $updates                     = get_remote_contents($protocol . 'api.blackpunk.id/v1/update/', $fields);
             $this->data['shop_settings'] = $shop_settings;
             $this->data['updates']       = json_decode($updates);
             $bc                          = [['link' => base_url(), 'page' => lang('home')], ['link' => '#', 'page' => lang('updates')]];
