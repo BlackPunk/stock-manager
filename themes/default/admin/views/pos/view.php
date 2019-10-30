@@ -449,7 +449,7 @@
         if ($pos_settings->remote_printing == 1) {
             ?>
             $(window).load(function () {
-                window.print();
+                // window.print();
                 return false;
             });
             <?php
