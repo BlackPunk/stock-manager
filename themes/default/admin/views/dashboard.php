@@ -44,13 +44,12 @@ function row_status($x)
     </div>
 <?php
 } ?>
-<?php if ($Owner || $Admin) {
-        ?>
+<?php if ($Owner || $Admin) { ?>
 <div class="row" style="margin-bottom: 15px;">
     <div class="col-lg-12">
         <div class="box">
             <div class="box-header">
-                <h2 class="blue"><i class="fa fa-th"></i><span class="break"></span><?= lang('quick_links') ?></h2>
+                <h2 class="blue"><i class="fa fa-link"></i><span class="break"></span><?= lang('quick_links') ?></h2>
             </div>
             <div class="box-content">
                 <div class="col-lg-1 col-md-2 col-xs-6">
@@ -62,7 +61,7 @@ function row_status($x)
                 </div>
                 <div class="col-lg-1 col-md-2 col-xs-6">
                     <a class="bdarkGreen white quick-button small" href="<?= admin_url('sales') ?>">
-                        <i class="fa fa-heart"></i>
+                        <i class="fa fa-usd"></i>
 
                         <p><?= lang('sales') ?></p>
                     </a>
@@ -78,7 +77,7 @@ function row_status($x)
 
                 <div class="col-lg-1 col-md-2 col-xs-6">
                     <a class="bred white quick-button small" href="<?= admin_url('purchases') ?>">
-                        <i class="fa fa-star"></i>
+                        <i class="fa fa-money"></i>
 
                         <p><?= lang('purchases') ?></p>
                     </a>
@@ -117,8 +116,7 @@ function row_status($x)
                     </a>
                 </div>
 
-                <?php if ($Owner) {
-            ?>
+                <?php if ($Owner) { ?>
                     <div class="col-lg-1 col-md-2 col-xs-6">
                         <a class="bblue white quick-button small" href="<?= admin_url('auth/users') ?>">
                             <i class="fa fa-group"></i>
@@ -132,16 +130,13 @@ function row_status($x)
                             <p><?= lang('settings') ?></p>
                         </a>
                     </div>
-                <?php
-        } ?>
+                <?php } ?>
                 <div class="clearfix"></div>
             </div>
         </div>
     </div>
 </div>
-<?php
-    } else {
-        ?>
+<?php } else { ?>
 <div class="row" style="margin-bottom: 15px;">
     <div class="col-lg-12">
         <div class="box">
@@ -149,68 +144,55 @@ function row_status($x)
                 <h2 class="blue"><i class="fa fa-th"></i><span class="break"></span><?= lang('quick_links') ?></h2>
             </div>
             <div class="box-content">
-            <?php if ($GP['products-index']) {
-            ?>
+            <?php if ($GP['products-index']) { ?>
                 <div class="col-lg-1 col-md-2 col-xs-6">
                     <a class="bblue white quick-button small" href="<?= admin_url('products') ?>">
                         <i class="fa fa-barcode"></i>
                         <p><?= lang('products') ?></p>
                     </a>
                 </div>
-            <?php
-        }
-        if ($GP['sales-index']) {
-            ?>
+            <?php }
+            if ($GP['sales-index']) { ?>
                 <div class="col-lg-1 col-md-2 col-xs-6">
                     <a class="bdarkGreen white quick-button small" href="<?= admin_url('sales') ?>">
                         <i class="fa fa-heart"></i>
                         <p><?= lang('sales') ?></p>
                     </a>
                 </div>
-            <?php
-        }
-        if ($GP['quotes-index']) {
-            ?>
+            <?php }
+            if ($GP['quotes-index']) { ?>
                 <div class="col-lg-1 col-md-2 col-xs-6">
                     <a class="blightOrange white quick-button small" href="<?= admin_url('quotes') ?>">
                         <i class="fa fa-heart-o"></i>
                         <p><?= lang('quotes') ?></p>
                     </a>
                 </div>
-            <?php
-        }
-        if ($GP['purchases-index']) {
-            ?>
+            <?php }
+            if ($GP['purchases-index']) { ?>
                 <div class="col-lg-1 col-md-2 col-xs-6">
                     <a class="bred white quick-button small" href="<?= admin_url('purchases') ?>">
                         <i class="fa fa-star"></i>
                         <p><?= lang('purchases') ?></p>
                     </a>
                 </div>
-            <?php
-        }
-        if ($GP['transfers-index']) {
-            ?>
+            <?php }
+            if ($GP['transfers-index']) { ?>
                 <div class="col-lg-1 col-md-2 col-xs-6">
                     <a class="bpink white quick-button small" href="<?= admin_url('transfers') ?>">
                         <i class="fa fa-star-o"></i>
                         <p><?= lang('transfers') ?></p>
                     </a>
                 </div>
-            <?php
-        }
-        if ($GP['customers-index']) {
-            ?>
+            <?php }
+            if ($GP['customers-index']) { ?>
                 <div class="col-lg-1 col-md-2 col-xs-6">
                     <a class="bgrey white quick-button small" href="<?= admin_url('customers') ?>">
                         <i class="fa fa-users"></i>
                         <p><?= lang('customers') ?></p>
                     </a>
                 </div>
-            <?php
-        }
-        if ($GP['suppliers-index']) {
-            ?>
+            <?php }
+            if ($GP['suppliers-index']) { ?>
                 <div class="col-lg-1 col-md-2 col-xs-6">
                     <a class="bgrey white quick-button small" href="<?= admin_url('suppliers') ?>">
                         <i class="fa fa-users"></i>
@@ -218,15 +200,13 @@ function row_status($x)
                         <p><?= lang('suppliers') ?></p>
                     </a>
                 </div>
-            <?php
-        } ?>
+            <?php } ?>
             <div class="clearfix"></div>
             </div>
         </div>
     </div>
 </div>
-<?php
-    } ?>
+<?php } ?>
 
 <div class="row" style="margin-bottom: 15px;">
     <div class="col-md-12">
@@ -237,39 +217,23 @@ function row_status($x)
             <div class="box-content">
                 <div class="row">
                     <div class="col-md-12">
-
                         <ul id="dbTab" class="nav nav-tabs">
-                            <?php if ($Owner || $Admin || $GP['sales-index']) {
-        ?>
+                            <?php if ($Owner || $Admin || $GP['sales-index']) { ?>
                             <li class=""><a href="#sales"><?= lang('sales') ?></a></li>
-                            <?php
-    } if ($Owner || $Admin || $GP['quotes-index']) {
-        ?>
+                            <?php } if ($Owner || $Admin || $GP['quotes-index']) { ?>
                             <li class=""><a href="#quotes"><?= lang('quotes') ?></a></li>
-                            <?php
-    } if ($Owner || $Admin || $GP['purchases-index']) {
-        ?>
+                            <?php } if ($Owner || $Admin || $GP['purchases-index']) { ?>
                             <li class=""><a href="#purchases"><?= lang('purchases') ?></a></li>
-                            <?php
-    } if ($Owner || $Admin || $GP['transfers-index']) {
-        ?>
+                            <?php } if ($Owner || $Admin || $GP['transfers-index']) { ?>
                             <li class=""><a href="#transfers"><?= lang('transfers') ?></a></li>
-                            <?php
-    } if ($Owner || $Admin || $GP['customers-index']) {
-        ?>
+                            <?php } if ($Owner || $Admin || $GP['customers-index']) { ?>
                             <li class=""><a href="#customers"><?= lang('customers') ?></a></li>
-                            <?php
-    } if ($Owner || $Admin || $GP['suppliers-index']) {
-        ?>
+                            <?php  } if ($Owner || $Admin || $GP['suppliers-index']) { ?>
                             <li class=""><a href="#suppliers"><?= lang('suppliers') ?></a></li>
-                            <?php
-    } ?>
+                            <?php } ?>
                         </ul>
-
                         <div class="tab-content">
-                        <?php if ($Owner || $Admin || $GP['sales-index']) {
-        ?>
-
+                        <?php if ($Owner || $Admin || $GP['sales-index']) { ?>
                             <div id="sales" class="tab-pane fade in">
                                 <div class="row">
                                     <div class="col-sm-12">
@@ -291,38 +255,31 @@ function row_status($x)
                                                 </thead>
                                                 <tbody>
                                                 <?php if (!empty($sales)) {
-            $r = 1;
-            foreach ($sales as $order) {
-                echo '<tr id="' . $order->id . '" class="' . ($order->pos ? 'receipt_link' : 'invoice_link') . '"><td>' . $r . '</td>
-                                                            <td>' . $this->sma->hrld($order->date) . '</td>
-                                                            <td>' . $order->reference_no . '</td>
-                                                            <td>' . $order->customer . '</td>
-                                                            <td>' . row_status($order->sale_status) . '</td>
-                                                            <td class="text-right">' . $this->sma->formatMoney($order->grand_total) . '</td>
-                                                            <td>' . row_status($order->payment_status) . '</td>
-                                                            <td class="text-right">' . $this->sma->formatMoney($order->paid) . '</td>
+                                                    $r = 1;
+                                                    foreach ($sales as $order) {
+                                                        echo '<tr id="' . $order->id . '" class="' . ($order->pos ? 'receipt_link' : 'invoice_link') . '"><td>' . $r . '</td>
+                                                        <td>' . $this->sma->hrld($order->date) . '</td>
+                                                        <td>' . $order->reference_no . '</td>
+                                                        <td>' . $order->customer . '</td>
+                                                        <td>' . row_status($order->sale_status) . '</td>
+                                                        <td class="text-right">' . $this->sma->formatMoney($order->grand_total) . '</td>
+                                                        <td>' . row_status($order->payment_status) . '</td>
+                                                        <td class="text-right">' . $this->sma->formatMoney($order->paid) . '</td>
                                                         </tr>';
-                $r++;
-            }
-        } else {
-            ?>
+                                                        $r++;
+                                                    }
+                                                } else { ?>
                                                     <tr>
-                                                        <td colspan="7"
-                                                            class="dataTables_empty"><?= lang('no_data_available') ?></td>
+                                                        <td colspan="7" class="dataTables_empty"><?= lang('no_data_available') ?></td>
                                                     </tr>
-                                                <?php
-        } ?>
+                                                <?php } ?>
                                                 </tbody>
                                             </table>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-
-                            <?php
-    } if ($Owner || $Admin || $GP['quotes-index']) {
-        ?>
-
+                            <?php } if ($Owner || $Admin || $GP['quotes-index']) { ?>
                             <div id="quotes" class="tab-pane fade">
                                 <div class="row">
                                     <div class="col-sm-12">
@@ -342,25 +299,23 @@ function row_status($x)
                                                 </thead>
                                                 <tbody>
                                                 <?php if (!empty($quotes)) {
-            $r = 1;
-            foreach ($quotes as $quote) {
-                echo '<tr id="' . $quote->id . '" class="quote_link"><td>' . $r . '</td>
+                                                    $r = 1;
+                                                    foreach ($quotes as $quote) {
+                                                        echo '<tr id="' . $quote->id . '" class="quote_link"><td>' . $r . '</td>
                                                         <td>' . $this->sma->hrld($quote->date) . '</td>
                                                         <td>' . $quote->reference_no . '</td>
                                                         <td>' . $quote->customer . '</td>
                                                         <td>' . row_status($quote->status) . '</td>
                                                         <td class="text-right">' . $this->sma->formatMoney($quote->grand_total) . '</td>
-                                                    </tr>';
-                $r++;
-            }
-        } else {
-            ?>
+                                                        </tr>';
+                                                        $r++;
+                                                    }
+                                                } else { ?>
                                                     <tr>
                                                         <td colspan="6"
                                                             class="dataTables_empty"><?= lang('no_data_available') ?></td>
                                                     </tr>
-                                                <?php
-        } ?>
+                                                <?php } ?>
                                                 </tbody>
                                             </table>
                                         </div>
@@ -368,10 +323,7 @@ function row_status($x)
                                 </div>
                             </div>
 
-                            <?php
-    } if ($Owner || $Admin || $GP['purchases-index']) {
-        ?>
-
+                            <?php } if ($Owner || $Admin || $GP['purchases-index']) { ?>
                             <div id="purchases" class="tab-pane fade in">
                                 <div class="row">
                                     <div class="col-sm-12">
@@ -391,25 +343,23 @@ function row_status($x)
                                                 </thead>
                                                 <tbody>
                                                 <?php if (!empty($purchases)) {
-            $r = 1;
-            foreach ($purchases as $purchase) {
-                echo '<tr id="' . $purchase->id . '" class="purchase_link"><td>' . $r . '</td>
-                                                    <td>' . $this->sma->hrld($purchase->date) . '</td>
-                                                    <td>' . $purchase->reference_no . '</td>
-                                                    <td>' . $purchase->supplier . '</td>
-                                                    <td>' . row_status($purchase->status) . '</td>
-                                                    <td class="text-right">' . $this->sma->formatMoney($purchase->grand_total) . '</td>
-                                                </tr>';
-                $r++;
-            }
-        } else {
-            ?>
+                                                    $r = 1;
+                                                    foreach ($purchases as $purchase) {
+                                                        echo '<tr id="' . $purchase->id . '" class="purchase_link"><td>' . $r . '</td>
+                                                        <td>' . $this->sma->hrld($purchase->date) . '</td>
+                                                        <td>' . $purchase->reference_no . '</td>
+                                                        <td>' . $purchase->supplier . '</td>
+                                                        <td>' . row_status($purchase->status) . '</td>
+                                                        <td class="text-right">' . $this->sma->formatMoney($purchase->grand_total) . '</td>
+                                                        </tr>';
+                                                        $r++;
+                                                    } 
+                                                } else { ?>
                                                     <tr>
                                                         <td colspan="6"
                                                             class="dataTables_empty"><?= lang('no_data_available') ?></td>
                                                     </tr>
-                                                <?php
-        } ?>
+                                                <?php } ?>
                                                 </tbody>
                                             </table>
                                         </div>
@@ -417,10 +367,7 @@ function row_status($x)
                                 </div>
                             </div>
 
-                            <?php
-    } if ($Owner || $Admin || $GP['transfers-index']) {
-        ?>
-
+                            <?php } if ($Owner || $Admin || $GP['transfers-index']) { ?>
                             <div id="transfers" class="tab-pane fade">
                                 <div class="row">
                                     <div class="col-sm-12">
@@ -440,27 +387,25 @@ function row_status($x)
                                                 </tr>
                                                 </thead>
                                                 <tbody>
-                                                <?php if (!empty($transfers)) {
-            $r = 1;
-            foreach ($transfers as $transfer) {
-                echo '<tr id="' . $transfer->id . '" class="transfer_link"><td>' . $r . '</td>
-                                                <td>' . $this->sma->hrld($transfer->date) . '</td>
-                                                <td>' . $transfer->transfer_no . '</td>
-                                                <td>' . $transfer->from_warehouse_name . '</td>
-                                                <td>' . $transfer->to_warehouse_name . '</td>
-                                                <td>' . row_status($transfer->status) . '</td>
-                                                <td class="text-right">' . $this->sma->formatMoney($transfer->grand_total) . '</td>
-                                            </tr>';
-                $r++;
-            }
-        } else {
-            ?>
+                                                <?php if (!empty($transfers)) { 
+                                                    $r = 1;
+                                                    foreach ($transfers as $transfer) { 
+                                                        echo '<tr id="' . $transfer->id . '" class="transfer_link"><td>' . $r . '</td>
+                                                        <td>' . $this->sma->hrld($transfer->date) . '</td>
+                                                        <td>' . $transfer->transfer_no . '</td>
+                                                        <td>' . $transfer->from_warehouse_name . '</td>
+                                                        <td>' . $transfer->to_warehouse_name . '</td>
+                                                        <td>' . row_status($transfer->status) . '</td>
+                                                        <td class="text-right">' . $this->sma->formatMoney($transfer->grand_total) . '</td>
+                                                        </tr>';
+                                                        $r++;
+                                                    }
+                                                } else { ?>
                                                     <tr>
                                                         <td colspan="7"
                                                             class="dataTables_empty"><?= lang('no_data_available') ?></td>
                                                     </tr>
-                                                <?php
-        } ?>
+                                                <?php } ?>
                                                 </tbody>
                                             </table>
                                         </div>
@@ -468,10 +413,7 @@ function row_status($x)
                                 </div>
                             </div>
 
-                            <?php
-    } if ($Owner || $Admin || $GP['customers-index']) {
-        ?>
-
+                            <?php } if ($Owner || $Admin || $GP['customers-index']) { ?>
                             <div id="customers" class="tab-pane fade in">
                                 <div class="row">
                                     <div class="col-sm-12">
@@ -491,25 +433,23 @@ function row_status($x)
                                                 </thead>
                                                 <tbody>
                                                 <?php if (!empty($customers)) {
-            $r = 1;
-            foreach ($customers as $customer) {
-                echo '<tr id="' . $customer->id . '" class="customer_link pointer"><td>' . $r . '</td>
-                                            <td>' . $customer->company . '</td>
-                                            <td>' . $customer->name . '</td>
-                                            <td>' . $customer->email . '</td>
-                                            <td>' . $customer->phone . '</td>
-                                            <td>' . $customer->address . '</td>
-                                        </tr>';
-                $r++;
-            }
-        } else {
-            ?>
+                                                    $r = 1;
+                                                    foreach ($customers as $customer) {
+                                                        echo '<tr id="' . $customer->id . '" class="customer_link pointer"><td>' . $r . '</td>
+                                                        <td>' . $customer->company . '</td>
+                                                        <td>' . $customer->name . '</td>
+                                                        <td>' . $customer->email . '</td>
+                                                        <td>' . $customer->phone . '</td>
+                                                        <td>' . $customer->address . '</td>
+                                                        </tr>';
+                                                        $r++;
+                                                    }
+                                                } else {?>
                                                     <tr>
                                                         <td colspan="6"
                                                             class="dataTables_empty"><?= lang('no_data_available') ?></td>
                                                     </tr>
-                                                <?php
-        } ?>
+                                                <?php } ?>
                                                 </tbody>
                                             </table>
                                         </div>
@@ -517,10 +457,7 @@ function row_status($x)
                                 </div>
                             </div>
 
-                            <?php
-    } if ($Owner || $Admin || $GP['suppliers-index']) {
-        ?>
-
+                            <?php } if ($Owner || $Admin || $GP['suppliers-index']) { ?>
                             <div id="suppliers" class="tab-pane fade">
                                 <div class="row">
                                     <div class="col-sm-12">
@@ -540,46 +477,36 @@ function row_status($x)
                                                 </thead>
                                                 <tbody>
                                                 <?php if (!empty($suppliers)) {
-            $r = 1;
-            foreach ($suppliers as $supplier) {
-                echo '<tr id="' . $supplier->id . '" class="supplier_link pointer"><td>' . $r . '</td>
-                                        <td>' . $supplier->company . '</td>
-                                        <td>' . $supplier->name . '</td>
-                                        <td>' . $supplier->email . '</td>
-                                        <td>' . $supplier->phone . '</td>
-                                        <td>' . $supplier->address . '</td>
-                                    </tr>';
-                $r++;
-            }
-        } else {
-            ?>
+                                                    $r = 1;
+                                                    foreach ($suppliers as $supplier) {
+                                                        echo '<tr id="' . $supplier->id . '" class="supplier_link pointer"><td>' . $r . '</td>
+                                                        <td>' . $supplier->company . '</td>
+                                                        <td>' . $supplier->name . '</td>
+                                                        <td>' . $supplier->email . '</td>
+                                                        <td>' . $supplier->phone . '</td>
+                                                        <td>' . $supplier->address . '</td>
+                                                        </tr>';
+                                                        $r++;
+                                                    }
+                                                } else { ?>
                                                     <tr>
                                                         <td colspan="6"
                                                             class="dataTables_empty"><?= lang('no_data_available') ?></td>
                                                     </tr>
-                                                <?php
-        } ?>
+                                                <?php } ?>
                                                 </tbody>
                                             </table>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-
-                            <?php
-    } ?>
-
+                            <?php } ?>
                         </div>
-
-
                     </div>
-
                 </div>
-
             </div>
         </div>
     </div>
-
 </div>
 
 <script type="text/javascript">
@@ -596,8 +523,7 @@ function row_status($x)
     });
 </script>
 
-<?php if (($Owner || $Admin) && $chatData) {
-        ?>
+<?php if (($Owner || $Admin) && $chatData) { ?>
     <style type="text/css" media="screen">
         .tooltip-inner {
             max-width: 500px;
@@ -800,5 +726,4 @@ function row_status($x)
             </div>
         </div>
     </div>
-<?php
-    } ?>
+<?php } ?>
